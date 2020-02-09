@@ -32,4 +32,9 @@
       yum:
         name: "{{ packages }}"
       vars:
-        packages: [ 'vim' , 'screen', 'wget', 'curl', 'tmux', 'telnet', 'htop', 'ncdu' ]
+        packages: [ 'vim' , 'screen', 'wget', 'curl', 'tmux', 'telnet', 'htop', 'ncdu', 'tcptraceroute' ]
+    - name: install tcpping
+      get_url:
+        url: http://www.vdberg.org/~richard/tcpping
+        dest: /usr/bin/tcpping
+        mode: '0755'
